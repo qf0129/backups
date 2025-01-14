@@ -2,7 +2,10 @@ module github.com/qf0129/backups
 
 go 1.21.6
 
-require github.com/qiniu/go-sdk/v7 v7.25.1
+require (
+	github.com/bmatcuk/doublestar/v4 v4.8.0
+	github.com/qiniu/go-sdk/v7 v7.25.1
+)
 
 require (
 	github.com/BurntSushi/toml v1.3.2 // indirect

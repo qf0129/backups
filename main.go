@@ -20,7 +20,6 @@ func main() {
 		fmt.Println("v0.0.1")
 		return
 	}
-
 	configFile := strings.TrimSpace(*configFlag)
 	if configFile == "" {
 		configFile = "conf.json"
@@ -29,7 +28,6 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-
 	os.MkdirAll(tmpDir, 0755)
 	for _, path := range conf.Conf.Paths {
 		if err := doBackup(path); err != nil {

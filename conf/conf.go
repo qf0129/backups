@@ -11,6 +11,7 @@ var Conf *config
 type config struct {
 	Qiniu       qiniuConfig
 	Paths       []string
+	IgnorePaths []string
 	RotateByDay bool
 	SkipFailed  bool
 }

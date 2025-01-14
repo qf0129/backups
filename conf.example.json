@@ -2,11 +2,14 @@
     "Paths": [
         "/tmp"
     ],
-    "RotateByDay": true,
     "Qiniu": {
         "AccessKey": "xxxxx",
         "SecretKey": "xxxxx",
         "Bucket": "xxx",
         "BucketDir": "xxx"
-    }
+    },
+    "RotateByDay": true,
+    "IgnorePaths": [
+        ".git/**"
+    ]
 }
