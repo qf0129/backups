@@ -26,3 +26,4 @@ go.work.sum
 conf.json*
 tmp/
 backups
+backups*.zip
