@@ -13,6 +13,7 @@ type config struct {
 	Paths       []string
 	IgnorePaths []string
 	RotateByDay bool
+	RotateDays  int
 	SkipFailed  bool
 }
 

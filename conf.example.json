@@ -11,5 +11,6 @@
         "Bucket": "xxx",
         "BucketDir": "xxx"
     },
-    "RotateByDay": true
+    "RotateByDay": true,
+    "RotateDays": 7
 }

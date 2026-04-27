@@ -1,9 +1,9 @@
-
 backups是一个文件备份工具，支持将本地目录或文件备份至七牛云等云存储。  
 backups is a file backup tool, support backup local directory or file to cloud storage.
 
 # 安装/INSTALLATION
-在[Releases](https://github.com/qf0129/backups/releases)中下载二进制文件  
+
+在[Releases](https://github.com/qf0129/backups/releases)中下载二进制文件
 
 # 使用/USAGE
 
@@ -19,20 +19,21 @@ backups -c conf.json
 ```
 
 ### 配置文件/CONFIGURATION
+
 默认会读取conf.json文件，你也可以通过-c选项指定配置文件路径
 
 ```
 {
     // 需要备份的目录或文件
-    "Paths": [ 
+    "Paths": [
         "/tmp",
         "/var/lib/mysql/",
         "/etc/nginx/conf.d/test.conf"
     ],
-    
+
     // 忽略的目录或文件, 支持通配符
     "IgnorePaths": [
-        "**/ib_logfile*", 
+        "**/ib_logfile*",
         ".git/**",
         "node_modules/**",
         ".DS_Store",
@@ -50,17 +51,22 @@ backups -c conf.json
 
     // 是否按天轮转, 默认false，为true时存储路径会增加/YYYYMMDD/目录
     "RotateByDay": true,
+    // 按天轮转存储的天数，超过的删除
+    "RotateDays": 7,
 }
 ```
 
 ### 定时执行/CRON
+
 可以搭配linux的crontab来定时执行
+
 ```
 # 每天1点执行
 0 1 * * * /opt/backups/backups -c /opt/backups/conf.json
 ```
 
 # 功能/FEATURE
+
 - [x] 支持忽略指定通配符路径
 - [x] 支持按日期存储
 - [x] 支持zip打包后再上传
@@ -69,4 +75,3 @@ backups -c conf.json
 - [ ] 支持cloudflare R2
 - [ ] 支持AWS S3
 - [ ] 支持windows\mac
-
